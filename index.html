@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retirement Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h1>Retirement Calculator</h1>
+      <form id="retirementForm">
+        <label for="currentAge">Current Age</label>
+        <input type="number" id="currentAge" required />
+
+        <label for="retirementAge">Retirement Age</label>
+        <input type="number" id="retirementAge" required />
+
+        <label for="lifeExpectancy">Life Expectancy</label>
+        <input type="number" id="lifeExpectancy" required />
+
+        <label for="preTaxSalary">Pre Tax Salary (₹)</label>
+        <input type="number" id="preTaxSalary" required />
+
+        <label for="postTaxSalary">Post Tax Salary (₹)</label>
+        <input type="number" id="postTaxSalary" required />
+
+        <label for="currentSavings">Current Savings (₹)</label>
+        <input type="number" id="currentSavings" required />
+
+        <label for="annualSavings">Annual Savings (₹)</label>
+        <input type="number" id="annualSavings" required />
+
+        <label for="annualReturnRate">Annual Return Rate (%)</label>
+        <input type="number" id="annualReturnRate" required />
+
+        <label for="annualRetirementSpending"
+          >Annual Retirement Spending (₹)</label
+        >
+        <input type="number" id="annualRetirementSpending" required />
+
+        <label for="monthlyExpenses">Monthly Expenses (₹)</label>
+        <input type="number" id="monthlyExpenses" required />
+
+        <label for="inflationRate">Inflation Rate (%)</label>
+        <input type="number" id="inflationRate" required />
+
+        <button type="button" onclick="calculateRetirement()">Calculate</button>
+      </form>
+
+      <div id="results">
+        <h2>Results:</h2>
+        <p id="totalSavings"></p>
+        <p id="requiredRetirementFund"></p>
+        <p id="fireNumber"></p>
+        <p id="surplusDeficit"></p>
+        <p id="annualExpenses"></p>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="retirementChart" width="400" height="400"></canvas>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
